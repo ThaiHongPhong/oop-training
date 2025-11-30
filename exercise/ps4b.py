@@ -1,7 +1,7 @@
 # Problem Set 4B
-# Name: <your name here>
+# Name: Thai Hong Curi
 # Collaborators:
-# Time Spent: x:xx
+# Time Spent: 0:40
 
 import string
 
@@ -70,7 +70,14 @@ class Message(object):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        pass #delete this line and replace with your code here
+        #delete this line and replace with your code here
+        self.message_text = text
+        text_copy = text[:]
+        self.valid_words = list()
+        words = list(text_copy.split())
+        for word in words:
+            if is_word(word_list=WORDLIST_FILENAME, word=word):
+                self.valid_words.append(word)
 
     def get_message_text(self):
         '''
@@ -78,7 +85,8 @@ class Message(object):
         
         Returns: self.message_text
         '''
-        pass #delete this line and replace with your code here
+        #delete this line and replace with your code here
+        return self.message_text[:]
 
     def get_valid_words(self):
         '''
@@ -87,7 +95,8 @@ class Message(object):
         
         Returns: a COPY of self.valid_words
         '''
-        pass #delete this line and replace with your code here
+        #delete this line and replace with your code here
+        return self.valid_words[:]
 
     def build_shift_dict(self, shift):
         '''
@@ -104,6 +113,12 @@ class Message(object):
                  another letter (string). 
         '''
         pass #delete this line and replace with your code here
+        mapping = dict()
+        for i in range(26):
+            mapping[chr(ord('A')+i)] = chr(ord('A') + i + shift) if ord('A') + i + shift <= ord('Z') else chr(ord('A') + i + shift - 26)
+            mapping[chr(ord('a')+i)] = chr(ord('a') + i + shift) if ord('a') + i + shift <= ord('z') else chr(ord('a') + i + shift - 26)
+        return mapping
+
 
     def apply_shift(self, shift):
         '''
