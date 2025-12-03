@@ -1,7 +1,7 @@
 # Problem Set 4B
 # Name: Thai Hong Curi
 # Collaborators:
-# Time Spent: 0:40
+# Time Spent: 2:40
 
 import string
 
@@ -292,4 +292,4 @@ if __name__ == '__main__':
    
     #TODO: best shift value and unencrypted story 
     
-     #delete this line and replace with your code here
+     # delete this line and replace with your code here
