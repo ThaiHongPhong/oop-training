@@ -233,7 +233,7 @@ if __name__ == '__main__':
     print("Decrypted message:", enc_message.decrypt_message())
      
     #TODO: WRITE YOUR TEST CASES HERE
-    mes = EncryptedSubMessage('i am gay')
+    mes = EncryptedSubMessage('i am goy')
     print(mes.decrypt_message())
     mes = EncryptedSubMessage('u im goy')
     print(mes.decrypt_message())
